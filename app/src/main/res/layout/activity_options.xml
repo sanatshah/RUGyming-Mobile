@@ -11,4 +11,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
+    <Spinner
+        android:id="@+id/gym_options"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search" />
+
 </LinearLayout>

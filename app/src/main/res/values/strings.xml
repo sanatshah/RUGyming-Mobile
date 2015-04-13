@@ -11,4 +11,17 @@
         <item>College Ave</item>
     </string-array>
 
+    <string-array name="busch_gyms">
+        <item>Sonny Werblin</item>
+        <item>SOmething Else</item>
+        <item>Somethign else</item>
+    </string-array>
+
+    <string-array name="else_gyms">
+        <item>asdf asdf</item>
+        <item>asdf Else</item>
+        <item>asdf else</item>
+    </string-array>
+
+
 </resources>
