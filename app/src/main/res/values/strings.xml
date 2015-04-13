@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RUHours</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="campus_array">
+        <item>Busch</item>
+        <item>Livingston</item>
+        <item>Cook/Douglas</item>
+        <item>College Ave</item>
+    </string-array>
+
+</resources>
