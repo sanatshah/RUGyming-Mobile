@@ -12,9 +12,7 @@
     </string-array>
 
     <string-array name="busch_gyms">
-        <item>Sonny Werblin</item>
-        <item>SOmething Else</item>
-        <item>Somethign else</item>
+        <item>Sonny Werblin Recreation Center</item>
     </string-array>
 
     <string-array name="collegeave_gyms">
@@ -30,7 +28,7 @@
 
 
     <string-array name="livingston_gyms">
-        <item>Livingston Reacreation Center</item>
+        <item>Livingston Recreation Center</item>
     </string-array>
 
 
@@ -46,19 +44,37 @@
     </string-array>
 
     <string-array name="collegeave_sport">
-        <item>College Avenue Gym</item>
-        <item>Deiner Park</item>
+        <item>Main Gym</item>
+        <item>Fitness Center</item>
+        <item>Annex</item>
+        <item>Power Gym</item>
+        <item>Rockwall</item>
+        <item>Multisports Bay 1 (Badminton)</item>
+    </string-array>
+
+    <string-array name="eastonave_sport">
         <item>Rutgers Fitness Center (Easton Ave Gym)</item>
     </string-array>
 
-    <string-array name="cook_douglass_sport">
-        <item>Cook/Douglass Recreation Center</item>
+    <string-array name="cookdouglass_sport">
+        <item>Gym Annex</item>
+        <item>Fitness Center</item>
+        <item>Racquet Sports</item>
+        <item>Pool</item>
+        <item>Spa</item>
+    </string-array>
+
+    <string-array name="loree_sport">
         <item>Loree Gym</item>
     </string-array>
 
 
     <string-array name="livingston_sport">
-        <item>Livingston Reacreation Center</item>
+        <item>Multisports</item>
+        <item>Fitness Center</item>
+        <item>Spa</item>
+        <item>Multi-Purpose Room</item>
+        <item>Multisports</item>
     </string-array>
 
 
