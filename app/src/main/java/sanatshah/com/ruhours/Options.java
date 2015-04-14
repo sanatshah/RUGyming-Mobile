@@ -126,14 +126,14 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
             spinnerSport.setAdapter(adapterCampus);
 
 
-        }else if (gym.equals("College Ave")){
+        }else if (gym.equals("College Avenue Gym")){
 
             adapterCampus = ArrayAdapter.createFromResource(this, R.array.collegeave_sport, android.R.layout.simple_spinner_dropdown_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerSport.setAdapter(adapterCampus);
 
 
-        } else if (gym.equals("Rutgers Fitness Center (Easton Ave Gym")){
+        } else if (gym.equals("Rutgers Fitness Center (Easton Ave Gym)")){
 
             adapterCampus = ArrayAdapter.createFromResource(this, R.array.eastonave_sport, android.R.layout.simple_spinner_dropdown_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
