@@ -76,6 +76,7 @@
         <item>Multi-Purpose Room</item>
         <item>Multisports</item>
     </string-array>
+    <string name="title_activity_search_gym_times">searchGymTimes</string>
 
 
 </resources>

@@ -1,5 +1,6 @@
 package sanatshah.com.ruhours;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -32,6 +34,8 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
     private String gym;
     private String sport;
 
+    private Button searchButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,14 +46,38 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
         ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this,R.array.campus_array,android.R.layout.simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCampus.setAdapter(adapter);
+
+
         campus="Busch";
         gym="Sonny Werblin Recreation Center";
         sport="Fitness Center";
         campusSelected();
         sportSelect();
+
+
         spinnerCampus.setOnItemSelectedListener(this);
         spinnerGyms.setOnItemSelectedListener(this);
         spinnerSport.setOnItemSelectedListener(this);
+
+        searchButton = (Button)findViewById(R.id.search_Button);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v){
+
+                Intent i = new Intent(Options.this, searchGymTimes.class);
+                i.putExtra(searchGymTimes.Campus_Picked,campus);
+
+                startActivity(i);
+
+
+
+        }
+        });
+
+
+
+
 
 
 
