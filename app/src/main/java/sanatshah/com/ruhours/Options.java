@@ -20,6 +20,7 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
     private static final String TAG = "Options";
     private Spinner spinner;
     private Spinner spinner1;
+    private Spinner spinner2;
     ArrayAdapter<CharSequence> adapterCampus;
     private String campus;
     private String gym;
@@ -54,14 +55,67 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
             adapterCampus= ArrayAdapter.createFromResource(this, R.array.busch_gyms, android.R.layout.simple_spinner_dropdown_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinner1.setAdapter(adapterCampus);
-        } else {
+            sportSelect();
+        } else if(campus.equals("Livingston")) {
 
-            adapterCampus = ArrayAdapter.createFromResource(this, R.array.else_gyms, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.livingston_gyms, android.R.layout.simple_spinner_dropdown_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinner1.setAdapter(adapterCampus);
+            sportSelect();
+
+        } else if(campus.equals("Cook/Douglass")){
+
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.cook_douglass_gyms, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner1.setAdapter(adapterCampus);
+            sportSelect();
+
+
+        } else if (campus.equals("College Ave")){
+
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.collegeave_gyms, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner1.setAdapter(adapterCampus);
+            sportSelect();
+
 
         }
 
+
+
+    }
+
+    private void sportSelect(){
+
+        spinner2= (Spinner)findViewById(R.id.sport_options);
+        Log.d(TAG, "In campusSelected() and campus= "+campus+"l");
+        if (campus.equals("Busch")) {
+
+
+            adapterCampus= ArrayAdapter.createFromResource(this, R.array.busch_sport, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner2.setAdapter(adapterCampus);
+        } else if(campus.equals("Livingston")) {
+
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.livingston_gyms, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner2.setAdapter(adapterCampus);
+
+        } else if(campus.equals("Cook/Douglass")){
+
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.cook_douglass_gyms, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner2.setAdapter(adapterCampus);
+
+
+        } else if (campus.equals("College Ave")){
+
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.collegeave_gyms, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner2.setAdapter(adapterCampus);
+
+
+        }
 
 
     }
