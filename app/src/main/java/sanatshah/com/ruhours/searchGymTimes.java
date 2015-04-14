@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class searchGymTimes extends ActionBarActivity {
@@ -13,6 +14,8 @@ public class searchGymTimes extends ActionBarActivity {
 
     private String campus;
 
+    private TextView test;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,8 +23,10 @@ public class searchGymTimes extends ActionBarActivity {
 
 
         campus = getIntent().getStringExtra(campus);
-
         
+        test=(TextView)findViewById(R.id.Test);
+        test.setText(campus);
+
 
     }
 
