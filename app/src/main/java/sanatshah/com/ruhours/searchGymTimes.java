@@ -34,7 +34,7 @@ public class searchGymTimes extends ActionBarActivity {
         sport = getIntent().getStringExtra(Sport_picked);
         
         test=(TextView)findViewById(R.id.Test);
-        jsonParser search=new jsonParser(campus,gym, sport);
+        jsonParser search=new jsonParser(campus,gym,sport);
         test.setText(search.timeOpen());
 
 
