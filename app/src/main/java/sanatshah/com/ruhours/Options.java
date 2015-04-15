@@ -89,7 +89,7 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
     private void campusSelected(){
 
         spinnerGyms= (Spinner)findViewById(R.id.gym_options);
-        Log.d(TAG, "In campusSelected() and campus= "+campus+"l");
+
         if (campus.equals("Busch")) {
 
 
@@ -129,7 +129,7 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
     private void sportSelect(){
 
         spinnerSport= (Spinner)findViewById(R.id.sport_options);
-        Log.d(TAG, "In campusSelected() and campus= "+campus+"l");
+
         if (gym.equals("Sonny Werblin Recreation Center")) {
 
 
