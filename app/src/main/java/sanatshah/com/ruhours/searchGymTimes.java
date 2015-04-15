@@ -11,8 +11,15 @@ public class searchGymTimes extends ActionBarActivity {
 
     public static final String Campus_Picked =
             "com.sanatshah.sunny.ruhours.picked_campus";
+    public static final String Gym_Picked =
+            "com.sanatshah.sunny.ruhours.picked_gym";
+    public static final String Sport_picked =
+            "com.sanatshah.sunny.ruhours.picked_sport";
 
     private String campus;
+    private String gym;
+    private String sport;
+
 
     private TextView test;
 
@@ -22,10 +29,15 @@ public class searchGymTimes extends ActionBarActivity {
         setContentView(R.layout.activity_search_gym_times);
 
 
-        campus = getIntent().getStringExtra(campus);
+        campus = getIntent().getStringExtra(Campus_Picked);
+        gym = getIntent().getStringExtra(Gym_Picked);
+        sport = getIntent().getStringExtra(Sport_picked);
         
         test=(TextView)findViewById(R.id.Test);
-        test.setText(campus);
+        test.setText("Campus: " + campus +" Gym: "+gym+" Sport: "+sport);
+
+
+        
 
 
     }

@@ -67,6 +67,8 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
 
                 Intent i = new Intent(Options.this, searchGymTimes.class);
                 i.putExtra(searchGymTimes.Campus_Picked,campus);
+                i.putExtra(searchGymTimes.Gym_Picked,gym);
+                i.putExtra(searchGymTimes.Sport_picked,sport);
 
                 startActivity(i);
 
