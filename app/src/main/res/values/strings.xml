@@ -75,6 +75,7 @@
         <item>Multisports</item>
     </string-array>
     <string name="title_activity_search_gym_times">searchGymTimes</string>
+    <string name="title_activity_menu">menuActivity</string>
 
 
 </resources>
