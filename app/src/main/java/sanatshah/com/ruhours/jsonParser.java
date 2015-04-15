@@ -20,7 +20,7 @@ import java.util.ArrayList;
 /**
  * Created by sunny on 4/15/15.
  */
-class jsonParser extends AsyncTask<URL, Void, String> {
+class jsonParser  {
 
 
     String line;
@@ -28,69 +28,14 @@ class jsonParser extends AsyncTask<URL, Void, String> {
 
     public jsonParser(String campus, String gym, String sport){
 
+        jsonRunner x=new jsonRunner();
 
 
-        doInBackground();
+        x.execute();
 
 
     }
 
-    protected String doInBackground(URL...urls){
-
-        JSONObject json=null;
-        try {
-
-            String x = "https://graph.facebook.com/19292868552";
-            InputStream is=new URL(x).openStream();
-           // JSONObject json = readJsonFromUrl("https://graph.facebook.com/19292868552");
-
-
-            BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
-
-            StringBuilder sb = new StringBuilder();
-            int cp;
-            while ((cp = rd.read()) != -1) {
-                sb.append((char) cp);
-            }
-
-            String jsonText=sb.toString();
-            json = new JSONObject(jsonText);
-
-
-
-
-
-            System.out.println(json.toString());
-
-
-            is.close();
-        }
-        catch (IOException e){
-
-
-        } catch (JSONException e){
-
-
-        }
-
-
-        onPostExecute(json);
-
-        return "Success";
-
-    }
-
-
-    protected void  onPostExecute(JSONObject j){
-
-        try {
-            line = j.get("id").toString();
-        } catch (JSONException e){
-
-
-        }
-
-    }
 
 
 
