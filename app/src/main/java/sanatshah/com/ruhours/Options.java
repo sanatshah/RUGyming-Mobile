@@ -112,7 +112,7 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
 
 
 
-        } else if (campus.equals("College Ave")){
+        } else if (campus.equals("College Avenue")){
 
             adapterCampus = ArrayAdapter.createFromResource(this, R.array.collegeave_gyms, android.R.layout.simple_spinner_dropdown_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

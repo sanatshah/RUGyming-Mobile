@@ -1,6 +1,7 @@
 package sanatshah.com.ruhours;
 
 import android.os.AsyncTask;
+
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -12,6 +13,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 /**
  * Created by sunny on 4/15/15.
@@ -92,20 +97,147 @@ public class jsonRunner extends AsyncTask<URL, String, JSONObject> {
             System.out.println(json.names());
             //String x=json.getJSONObject("Busch Campus").getJSONObject("Sonny Werblin Recreation Center").getJSONObject("meetingareas").getJSONObject("Fitness Center").getString("3/15/2015");
 
-            JSONObject y=json.getJSONObject("Busch Campus");
-            JSONObject z=y.getJSONObject("Sonny Werblin Recreation Center");
-            JSONObject k=z.getJSONObject("meetingareas");
-            JSONObject l=k.getJSONObject("Fitness Center");
-            String p="3/16/2015";
-            p.replaceAll("/","\\\\/");
+         if((campus.equals("Busch")) || (campus.equals("Livingston"))) {
+             JSONObject y = json.getJSONObject(campus + " Campus");
+             JSONObject z = y.getJSONObject(gym);
+             JSONObject k = z.getJSONObject("meetingareas");
+             JSONObject l = k.getJSONObject(sport);
 
-            String x=l.getString(p);
-            setTime(x);
-            //String s=p.toString();
+             DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+             Date date = new Date();
+             String p = dateFormat.format(date);
+             System.out.println(dateFormat.format(date));
+
+             if (p.charAt(4) == '0') {
+
+                 p = p.substring(0, 3) + p.substring(5, p.length());
+             }
+
+             if (p.charAt(0) == '0') {
+                 p = p.substring(1, p.length());
+             }
+
+             System.out.println(p);
+             p.replaceAll("/", "\\\\/");
+
+
+             String x = l.getString(p);
+             setTime(x);
+             //String s=p.toString();
              System.out.println(x);
 
 
-            caller.onBackgroundTaskCompleted(x);
+             caller.onBackgroundTaskCompleted(x);
+
+         } else if (campus.equals("College Avenue")){
+
+             JSONObject y = json.getJSONObject(campus + " Campus");
+
+             JSONObject l= null;
+             JSONObject z=null;
+
+             if (gym.equals("Rutgers Fitness Center (Easton Ave Gym)")) {
+                 z = y.getJSONObject(gym);
+                 JSONObject k = z.getJSONObject("meetingareas");
+                  l= k.getJSONObject("Hours");
+
+             } else if (gym.equals("College Avenue Gym")) {
+
+                     z = y.getJSONObject(gym);
+
+
+
+                 JSONObject k = z.getJSONObject("meetingareas");
+
+                 if (sport.equals("Main Gym")) {
+                     sport=sport+" ";
+                     l = k.getJSONObject(sport);
+                 } else {
+                     l = k.getJSONObject(sport);
+                 }
+             }
+
+             DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+             Date date = new Date();
+             String p = dateFormat.format(date);
+             System.out.println(dateFormat.format(date));
+
+             if (p.charAt(4) == '0') {
+
+                 p = p.substring(0, 3) + p.substring(5, p.length());
+             }
+
+             if (p.charAt(0) == '0') {
+                 p = p.substring(1, p.length());
+             }
+
+             System.out.println(p);
+             p.replaceAll("/", "\\\\/");
+
+
+             String x = l.getString(p);
+             setTime(x);
+             //String s=p.toString();
+             System.out.println(x);
+
+
+             caller.onBackgroundTaskCompleted(x);
+
+
+             System.out.println("In CAC");
+
+
+         } else {
+             if (campus.equals("Cook/Douglass")) {
+                 JSONObject y = json.getJSONObject(campus + " Campus");
+                 JSONObject z = null;
+                 JSONObject l = null;
+                 if (gym.equals("Cook/Douglass Recreation Center")) {
+                     z = y.getJSONObject(gym);
+                     JSONObject k = z.getJSONObject("meetingareas");
+
+                     if ((sport.equals("Fitness Center") || (sport.equals("Gym Annex") || (sport.equals("Racquet Sports"))))) {
+                         sport = sport + " ";
+                     }
+                     l = k.getJSONObject(sport);
+
+                 } else {
+
+                     throw new JSONException("Error");
+
+
+                 }
+
+
+                 DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+                 Date date = new Date();
+                 String p = dateFormat.format(date);
+                 System.out.println(dateFormat.format(date));
+
+                 if (p.charAt(4) == '0') {
+
+                     p = p.substring(0, 3) + p.substring(5, p.length());
+                 }
+
+                 if (p.charAt(0) == '0') {
+                     p = p.substring(1, p.length());
+                 }
+
+                 System.out.println(p);
+                 p.replaceAll("/", "\\\\/");
+
+
+                 String x = l.getString(p);
+                 setTime(x);
+                 //String s=p.toString();
+                 System.out.println(x);
+
+
+                 caller.onBackgroundTaskCompleted(x);
+
+
+             }
+         }
 
 
         } catch (JSONException e){

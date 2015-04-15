@@ -20,6 +20,7 @@ public class searchGymTimes extends ActionBarActivity {
     private String gym;
     private String sport;
 
+    private String temp;
 
     private TextView test;
 
@@ -36,12 +37,18 @@ public class searchGymTimes extends ActionBarActivity {
         test=(TextView)findViewById(R.id.Test);
 
 
-        jsonParser search=new jsonParser(campus,gym,sport);
-
-        test.setText(search.timeOpen());
+        jsonParser search=new jsonParser(campus,gym,sport,this);
 
 
 
+
+
+
+
+    }
+
+    public void testSetter(String x){
+        test.setText(x);
 
 
     }

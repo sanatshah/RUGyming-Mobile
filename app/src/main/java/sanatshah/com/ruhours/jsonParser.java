@@ -25,13 +25,15 @@ class jsonParser  {
 
     public String line;
     jsonRunner x;
+    searchGymTimes curr;
 
-    public jsonParser(String campus, String gym, String sport){
-
+    public jsonParser(String campus, String gym, String sport, searchGymTimes curr){
+        this.curr=curr;
        x =new jsonRunner(campus,gym,sport, this);
 
 
         x.execute();
+
 
     }
 
@@ -39,7 +41,7 @@ class jsonParser  {
 
         line=x;
         System.out.println(line);
-
+        curr.testSetter(line);
         return line;
 
     }
@@ -52,9 +54,7 @@ class jsonParser  {
 
     public String timeOpen(){
 
-        line=x.returnTime();
-
-        System.out.println(x.returnTime());
+        System.out.println("timOpen"+line);
 
         return line;
     }

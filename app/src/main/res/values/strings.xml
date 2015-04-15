@@ -7,8 +7,8 @@
     <string-array name="campus_array">
         <item>Busch</item>
         <item>Livingston</item>
+        <item>College Avenue</item>
         <item>Cook/Douglass</item>
-        <item>College Ave</item>
     </string-array>
 
     <string-array name="busch_gyms">
@@ -17,7 +17,6 @@
 
     <string-array name="collegeave_gyms">
         <item>College Avenue Gym</item>
-        <item>Deiner Park</item>
         <item>Rutgers Fitness Center (Easton Ave Gym)</item>
     </string-array>
 
@@ -38,18 +37,17 @@
         <item>Multisports Bay 2 (Multi-Use)</item>
         <item>Multisports Bay 3 (Basketball)</item>
         <item>Multisports Bay 4 (Basketball)</item>
-        <item>Raquetball</item>
+        <item>Racquetball</item>
         <item>Olympic Pool</item>
         <item>Patio Pool</item>
     </string-array>
 
     <string-array name="collegeave_sport">
-        <item>Main Gym</item>
         <item>Fitness Center</item>
+        <item>Main Gym</item>
         <item>Annex</item>
-        <item>Power Gym</item>
+        <item>PowerGym</item>
         <item>Rockwall</item>
-        <item>Multisports Bay 1 (Badminton)</item>
     </string-array>
 
     <string-array name="eastonave_sport">
@@ -57,11 +55,11 @@
     </string-array>
 
     <string-array name="cookdouglass_sport">
-        <item>Gym Annex</item>
         <item>Fitness Center</item>
+        <item>Gym Annex</item>
         <item>Racquet Sports</item>
         <item>Pool</item>
-        <item>Spa</item>
+        <item>Spa (By Appointment)</item>
     </string-array>
 
     <string-array name="loree_sport">
@@ -70,9 +68,9 @@
 
 
     <string-array name="livingston_sport">
-        <item>Multisports</item>
         <item>Fitness Center</item>
-        <item>Spa</item>
+        <item>Multisports</item>
+        <item>Spa (By Appointment)</item>
         <item>Multi-Purpose Room</item>
         <item>Multisports</item>
     </string-array>
