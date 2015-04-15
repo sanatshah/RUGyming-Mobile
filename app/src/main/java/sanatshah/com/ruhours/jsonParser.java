@@ -23,16 +23,15 @@ import java.util.ArrayList;
 class jsonParser  {
 
 
-    String line;
-
+    public String line;
+    jsonRunner x;
 
     public jsonParser(String campus, String gym, String sport){
 
-        jsonRunner x=new jsonRunner();
+       x =new jsonRunner(campus,gym,sport);
 
 
         x.execute();
-
 
     }
 
@@ -44,7 +43,9 @@ class jsonParser  {
 
     public String timeOpen(){
 
+        line=x.returnTime();
 
+        System.out.println(x.returnTime());
 
         return line;
     }
