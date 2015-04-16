@@ -22,13 +22,17 @@ public class jsonRunner extends AsyncTask<URL, String, JSONObject> {
     private String sport;
     public String time;
 
-    private TextView tv;
 
-    public jsonRunner(String campus, String gym, String sport){
+
+    jsonParser caller;
+
+    public jsonRunner(String campus, String gym, String sport, jsonParser caller){
         this.campus=campus;
         this.gym=gym;
         this.sport=sport;
         this.time="Error";
+
+        this.caller=caller;
 
     }
 
@@ -101,6 +105,7 @@ public class jsonRunner extends AsyncTask<URL, String, JSONObject> {
              System.out.println(x);
 
 
+            caller.onBackgroundTaskCompleted(x);
 
 
         } catch (JSONException e){

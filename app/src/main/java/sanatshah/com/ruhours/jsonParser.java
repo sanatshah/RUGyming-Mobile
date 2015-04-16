@@ -28,10 +28,19 @@ class jsonParser  {
 
     public jsonParser(String campus, String gym, String sport){
 
-       x =new jsonRunner(campus,gym,sport);
+       x =new jsonRunner(campus,gym,sport, this);
 
 
         x.execute();
+
+    }
+
+    public String onBackgroundTaskCompleted(String x){
+
+        line=x;
+        System.out.println(line);
+
+        return line;
 
     }
 
