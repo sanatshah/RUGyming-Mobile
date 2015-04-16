@@ -3,29 +3,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:weightSum="1"
+    android:background="#FFFFFF"
+    android:focusable="true">
 
+
+    <ImageView
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_gravity="left"
+        android:src="@drawable/logo" />
 
     <Spinner
         android:id="@+id/campus_options"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:textColor="#ffffffff"
+        android:layout_gravity="left"
+
+        android:background="#ff9c0606"
+        android:focusable="false"
+        android:touchscreenBlocksFocus="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
 
     <Spinner
         android:id="@+id/gym_options"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:textColor="#ffffffff"
+        android:background="#ff9c0606" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
 
     <Spinner
         android:id="@+id/sport_options"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:textColor="#ffffffff"
+        android:background="#ff9c0606" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90dp" />
 
     <Button
         android:id="@+id/search_Button"
-        android:layout_width="match_parent"
+        android:layout_width="215dp"
         android:layout_height="wrap_content"
-        android:text="Search"
-        />
+        android:text="Check Time"
+
+        android:drawableRight="@drawable/arrow"
+        android:scaleHeight="10dp"
+        android:background="#ff9c0606"
+        android:textColor="#ffffffff"
+        android:layout_gravity="right"
+
+
+
+        android:elevation="22dp" />
 
 </LinearLayout>

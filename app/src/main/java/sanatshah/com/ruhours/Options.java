@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import java.lang.reflect.Method;
 
+import sanatshah.com.ruhours.R;
+
 
 public class Options extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
 
@@ -43,7 +45,7 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
 
 
         spinnerCampus= (Spinner)findViewById(R.id.campus_options);
-        ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this,R.array.campus_array,android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this,R.array.campus_array,R.layout.spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCampus.setAdapter(adapter);
 
@@ -93,20 +95,20 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
         if (campus.equals("Busch")) {
 
 
-            adapterCampus= ArrayAdapter.createFromResource(this, R.array.busch_gyms, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus= ArrayAdapter.createFromResource(this, R.array.busch_gyms, R.layout.spinner_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerGyms.setAdapter(adapterCampus);
 
         } else if(campus.equals("Livingston")) {
 
-            adapterCampus = ArrayAdapter.createFromResource(this, R.array.livingston_gyms, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.livingston_gyms, R.layout.spinner_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerGyms.setAdapter(adapterCampus);
 
 
         } else if(campus.equals("Cook/Douglass")){
 
-            adapterCampus = ArrayAdapter.createFromResource(this, R.array.cook_douglass_gyms, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.cook_douglass_gyms, R.layout.spinner_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerGyms.setAdapter(adapterCampus);
 
@@ -114,7 +116,7 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
 
         } else if (campus.equals("College Avenue")){
 
-            adapterCampus = ArrayAdapter.createFromResource(this, R.array.collegeave_gyms, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.collegeave_gyms, R.layout.spinner_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerGyms.setAdapter(adapterCampus);
 
@@ -133,39 +135,39 @@ public class Options extends ActionBarActivity implements AdapterView.OnItemSele
         if (gym.equals("Sonny Werblin Recreation Center")) {
 
 
-            adapterCampus= ArrayAdapter.createFromResource(this, R.array.busch_sport, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus= ArrayAdapter.createFromResource(this, R.array.busch_sport, R.layout.spinner_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerSport.setAdapter(adapterCampus);
         } else if(gym.equals("Livingston Recreation Center")) {
 
-            adapterCampus = ArrayAdapter.createFromResource(this, R.array.livingston_sport, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.livingston_sport, R.layout.spinner_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerSport.setAdapter(adapterCampus);
 
         } else if(gym.equals("Cook/Douglass Recreation Center")){
 
-            adapterCampus = ArrayAdapter.createFromResource(this, R.array.cookdouglass_sport, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.cookdouglass_sport, R.layout.spinner_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerSport.setAdapter(adapterCampus);
 
 
         } else if (gym.equals("Loree Gym")){
 
-            adapterCampus = ArrayAdapter.createFromResource(this, R.array.loree_sport, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.loree_sport, R.layout.spinner_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerSport.setAdapter(adapterCampus);
 
 
         }else if (gym.equals("College Avenue Gym")){
 
-            adapterCampus = ArrayAdapter.createFromResource(this, R.array.collegeave_sport, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.collegeave_sport, R.layout.spinner_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerSport.setAdapter(adapterCampus);
 
 
         } else if (gym.equals("Rutgers Fitness Center (Easton Ave Gym)")){
 
-            adapterCampus = ArrayAdapter.createFromResource(this, R.array.eastonave_sport, android.R.layout.simple_spinner_dropdown_item);
+            adapterCampus = ArrayAdapter.createFromResource(this, R.array.eastonave_sport, R.layout.spinner_item);
             adapterCampus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerSport.setAdapter(adapterCampus);
 

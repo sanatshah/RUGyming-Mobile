@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RUHours</string>
+    <string name="app_name">RU Gyming</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -56,6 +56,7 @@
 
     <string-array name="cookdouglass_sport">
         <item>Fitness Center</item>
+
         <item>Gym Annex</item>
         <item>Racquet Sports</item>
         <item>Pool</item>
@@ -75,7 +76,7 @@
         <item>Multisports</item>
     </string-array>
     <string name="title_activity_search_gym_times">searchGymTimes</string>
-    <string name="title_activity_menu">RU Hours</string>
+    <string name="title_activity_menu">RU Gyming</string>
 
 
 </resources>
